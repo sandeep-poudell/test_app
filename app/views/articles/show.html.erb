@@ -2,6 +2,7 @@
 
 <p><strong>Title : </strong><%= @article.title %> </p>
 <p><strong>Description : </strong><%= @article.description %> </p>
+<p><strong>User: </strong><%= @article.user.username %> </p>
 
 <%= link_to "To the articles page", articles_path %>
 <br><br>

@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
   resources :articles
+  get 'signup', to: 'users#new'
+  # post 'users', to: 'users#create'
+  resources :users, except: [:new]      #`new` is handled by signup route
 end
 
