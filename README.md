@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+![My Image](https://github.com/sandeep-poudell/test_app/blob/main/app/assets/images/homepage.png)
