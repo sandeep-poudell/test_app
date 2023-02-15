@@ -37,7 +37,7 @@
 <!--        <a href="#" class="btn btn-primary">See more</a>-->
         <%= link_to "Show", article_path(article), method: :show, class: "btn btn-primary" %>
         <%= link_to "Edit", edit_article_path(article), method: :edit, class: "btn btn-secondary" %>
-        <%= link_to "Delete", article_path(article), method: :show, class: "btn btn-outline-danger" %>
+        <%= link_to "Delete", article_path(article), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
       </div>
     </div>
   </div>

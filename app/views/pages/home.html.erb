@@ -9,9 +9,18 @@
 <body>
 
     <div class="container">
-    <div class="jumbotron", style="margin-top: 30px">
-        <h1>Articles Blog</h1>
-        <p>Welcome to the Article Blog </p>
+    <div class="jumbotron",
+          style="
+            margin-top: 30px;
+            background-image: url('https://images.unsplash.com/photo-1522881451255-f59ad836fdfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1572&q=80');
+            background-size: cover;
+            height: 400px;
+            width: 100%
+         "
+    >
+        <h1 style="color: white">Articles Blog</h1>
+        <p style="color: antiquewhite">Welcome to the Article Blog </p>
+      <br><br>
         <p>
 <!--          <a class="btn btn-primary btn-lg" href="#" role="button">Sign Up</a>-->
           <%= link_to "Sign Up", signup_path, class: "btn btn-primary btn-lg" %>

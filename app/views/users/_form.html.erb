@@ -1,32 +1,36 @@
-<% if @user.errors.any? %>
-  <h2> User could not be created because of following errors </h2>
-  <ul>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li> <%= msg %> </li>
-    <% end %>
-  </ul>
-<% end %>
-
+<%= render 'shared/errors', obj: @user%>
 
 <%=  form_with(model: @user, local: true) do |f| %>
+  <div class="container">
+    <div class=" card" style="margin-top: 30px">
+      <h5 class="card-header">Create a new account</h5>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <p>
+              <%= f.label :username %>
+              <%= f.text_field :username, class:"form-control", placeholder: "Enter username" %>
+            </p>
 
-  <p>
-    <%= f.label :username %> <br/>
-    <%= f.text_field :username %>
-  </p>
+            <p>
+              <%= f.label :email %>
+              <%= f.email_field :email, class:"form-control", placeholder: "Enter email" %>
+            </p>
 
-  <p>
-    <%= f.label :email %> <br/>
-    <%= f.email_field :email %>
-  </p>
+            <p>
+              <%= f.label :password %>
+              <%= f.password_field :password, class:"form-control", placeholder: "Enter password" %>
+            </p>
 
-  <p>
-    <%= f.label :password %> <br/>
-    <%= f.password_field :password %>
-  </p>
-
-  <p>
-    <%= f.submit "Sign Up" %>
-  </p>
+            <p>
+              <%= f.submit "Sign Up", class: "btn btn-primary" %> <%= link_to "Cancel", root_path, class: "btn btn-outline-danger" %>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
 <% end %>
+
+
