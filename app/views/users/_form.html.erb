@@ -23,7 +23,7 @@
             </p>
 
             <p>
-              <%= f.submit "Sign Up", class: "btn btn-primary" %> <%= link_to "Cancel", root_path, class: "btn btn-outline-danger" %>
+              <%= f.submit(@user.new_record? ? "Sign Up" : "Update account", class: "btn btn-primary") %> <%= link_to "Cancel", root_path, class: "btn btn-outline-danger" %>
             </p>
           </div>
         </form>
