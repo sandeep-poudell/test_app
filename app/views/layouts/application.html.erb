@@ -60,9 +60,8 @@
     </nav>
 
 
-    <% flash.each do |name, msg| %>
-      <%= msg %>
-    <% end %>
+    <%=  render "layouts/flash_msg" %>
+
     <%= yield %>
 
 <!--    To prevent footer from blocking content -->

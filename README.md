@@ -24,3 +24,7 @@ Things you may want to cover:
 * ...
 
 ![My Image](https://github.com/sandeep-poudell/test_app/blob/main/app/assets/images/homepage.png)
+
+![My Image](https://github.com/sandeep-poudell/test_app/blob/main/app/assets/images/signup.png)
+
+![My Image](https://github.com/sandeep-poudell/test_app/blob/main/app/assets/images/articles.png)
