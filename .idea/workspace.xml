@@ -7,7 +7,6 @@
     <list default="true" id="b01a6e39-df81-4a37-a683-70de24832a36" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_errors.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_errors.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +137,7 @@
       <workItem from="1676359571187" duration="6978000" />
       <workItem from="1676441627959" duration="14000" />
       <workItem from="1676441645389" duration="4729000" />
-      <workItem from="1676506143912" duration="2261000" />
+      <workItem from="1676506143912" duration="3698000" />
     </task>
     <servers />
   </component>
