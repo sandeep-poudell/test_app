@@ -1,9 +1,11 @@
 class ArticlesController < ApplicationController
 
     before_action :set_article, only: [:show, :edit, :update, :destroy]
+    before_action :require_user, except: [:show, :index]
+    before_action :require_same_user, only: [:edit, :update, :destroy]
     
     def index
-        @articles = Article.all
+        @articles = Article.order(created_at: :desc).all
     end
 
     def show
@@ -15,11 +17,11 @@ class ArticlesController < ApplicationController
 
     def create
         @article = Article.new(params.require(:article).permit(:title, :description))
-        @article.user = User.last
+        @article.user = current_user
         if @article.valid?
             @article.save
             flash[:notice] = "Article was created successfully"
-            redirect_to articles_path
+            redirect_to @article
         else
             render :new, status: :unprocessable_entity
         end
@@ -40,7 +42,7 @@ class ArticlesController < ApplicationController
 
     def destroy
         if @article.destroy
-            flash[:notice] = "The article was deleted successfully"
+            flash[:alert] = "The article was deleted"
             redirect_to articles_path
         end
     end
@@ -49,6 +51,13 @@ class ArticlesController < ApplicationController
 
     def set_article
         @article = Article.find(params[:id])
+    end
+
+    def require_same_user
+        if current_user != @article.user
+            flash[:alert] = "You can only edit or delete your own article"
+            redirect_to @article
+        end
     end
 
 end

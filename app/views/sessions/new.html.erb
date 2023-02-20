@@ -1,0 +1,30 @@
+<h2 class="heading", style="text-align: center; margin-top: 20px"> Log In</h2>
+
+<%=  form_with(scope: :session, url: login_path, local: true) do |f| %>
+  <div class="container">
+    <div class=" card" style="margin-top: 30px">
+      <h5 class="card-header">Log In</h5>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <p>
+              <%= f.label :username %>
+              <%= f.text_field :username, class:"form-control", placeholder: "Enter your username" %>
+            </p>
+
+            <p>
+              <%= f.label :password %>
+              <%= f.password_field :password, class:"form-control", placeholder: "Enter your password" %>
+            </p>
+
+            <p>
+              <%= f.submit "Login" , class: "btn btn-primary" %>
+              <%= link_to "Cancel", root_path, class: "btn btn-outline-danger" %>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<% end %>

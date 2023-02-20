@@ -1,0 +1,15 @@
+<h2 class="heading", style="text-align: center; margin-top: 20px"> <%= @user.username %>'s profile </h2>
+<br>
+<div style="text-align: center">
+  <img src="https://picsum.photos/200"  />
+</div>
+<br>
+<div style="text-align: center">
+  <% if logged_in? && @user == current_user %>
+    <%= link_to "Update Profile", edit_user_path(@user), method: :edit, class: "btn btn-outline-primary" %>
+    <%= link_to "Create Article", new_article_path, method: :new, class: "btn btn-outline-success" %>
+  <% end %>
+</div>
+
+
+<%= render 'articles/articles-list' %>
